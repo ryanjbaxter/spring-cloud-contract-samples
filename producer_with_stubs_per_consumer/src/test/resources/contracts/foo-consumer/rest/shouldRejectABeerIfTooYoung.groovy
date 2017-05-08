@@ -17,7 +17,7 @@ we'll NOT grant him the beer
 		method 'POST'
 		url '/check'
 		body(
-				age: 10
+				age: $(regex('[0-1][0-9]'))
 		)
 		headers {
 			contentType(applicationJson())
@@ -32,9 +32,6 @@ we'll NOT grant him the beer
 	""")
 		headers {
 			contentType(applicationJson())
-		}
-		testMatchers {
-			jsonPath('$.status', byType())
 		}
 	}
 }
