@@ -41,13 +41,9 @@ class PersonToCheck {
 
 class Response {
 	public BeerCheckStatus status;
-	public String foo;
-	public String bar;
 	
-	Response(BeerCheckStatus status, String foo, String bar) {
+	Response(BeerCheckStatus status) {
 		this.status = status;
-		this.foo = foo;
-		this.bar = bar;
 	}
 }
 
@@ -59,8 +55,8 @@ enum BeerCheckStatus {
 /*
 
 if (personCheckingService.shouldGetBeer(personToCheck)) {
-			return new Response(BeerCheckStatus.OK, "foo", "bar");
+			return new Response(BeerCheckStatus.OK);
 		}
-		return new Response(BeerCheckStatus.NOT_OK, "foo", "bar");
+		return new Response(BeerCheckStatus.NOT_OK);
 
  */
