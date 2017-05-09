@@ -17,8 +17,6 @@ class BeerController {
 
 	private final RestTemplate restTemplate;
 
-	int port = 8090;
-
 	BeerController(RestTemplate restTemplate) {
 		this.restTemplate = restTemplate;
 	}
@@ -46,7 +44,6 @@ class Person {
 
 class Response {
 	public ResponseStatus status;
-	public String foo;
 }
 
 enum ResponseStatus {
